@@ -1,8 +1,10 @@
-
 import { useState } from "react";
 import Header from "./components/Header";
 import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
 import Sidebar from "./components/Sidebar";
+import Students from "./pages/Students";
+// import Teachers from "./pages/Teachers";
 import "./styles/Layout.css";
 
 function App() {
@@ -48,32 +50,39 @@ function App() {
         />
 
         <main className="main-content">
-          <div className="page-heading">
-            <div>
-              <h1>{activePage}</h1>
-              <p>
-                Welcome to your School Management Portal.
-              </p>
-            </div>
-          </div>
 
-          <section className="welcome-card">
-            <div>
-              <span className="welcome-label">EDUCARE SCHOOL</span>
-              <h2>
-                {activePage === "Dashboard"
-                  ? "Welcome back, Admin!"
-                  : `${activePage} Management`}
-              </h2>
-              <p>
-                {activePage === "Dashboard"
-                  ? "Manage your school activities from one place."
-                  : `The ${activePage.toLowerCase()} page will be built here.`}
-              </p>
-            </div>
+          {activePage === "Dashboard" && (
+            <>
+              <div className="page-heading">
+                <div>
+                  <h1>Dashboard</h1>
+                  <p>
+                    Welcome to your School Management Portal.
+                  </p>
+                </div>
+              </div>
 
-            <GraduationCapPlaceholder />
-          </section>
+              <section className="welcome-card">
+                <div>
+                  <span className="welcome-label">EDUCARE SCHOOL</span>
+
+                  <h2>Welcome back, Admin!</h2>
+
+                  <p>
+                    Manage your school activities from one place.
+                  </p>
+                </div>
+
+                <GraduationCapPlaceholder />
+              </section>
+
+              <Dashboard />
+            </>
+          )}
+
+          {activePage === "Students" && <Students />}
+          {/* {activePage === "Teachers" && <Teachers />} */}
+
         </main>
       </div>
     </div>

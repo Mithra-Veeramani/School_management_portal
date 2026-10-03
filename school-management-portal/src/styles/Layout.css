@@ -665,38 +665,45 @@ button {
   flex-shrink: 0;
 }
 
-/* DARK MODE */
+/* =========================
+   DARK MODE
+   ========================= */
 
 .app.dark-mode {
-  background: #0d1728;
+  background: #0b1424;
   color: #edf4ff;
 }
 
+/* =========================
+   HEADER
+   ========================= */
+
 .dark-mode .header {
-  background: #142238;
+  background: #101d31;
   border-color: #263750;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
 }
 
-.dark-mode .brand-details h2,
-.dark-mode .admin-details strong,
-.dark-mode .page-heading h1 {
+.dark-mode .brand-details h2 {
   color: #f1f6ff;
 }
 
-.dark-mode .brand-details p,
-.dark-mode .admin-details span,
-.dark-mode .page-heading p {
+.dark-mode .brand-details p {
   color: #a8b8d0;
 }
 
-.dark-mode .icon-button,
-.dark-mode .admin-trigger {
+.dark-mode .icon-button {
   color: #e6efff;
 }
 
+.dark-mode .icon-button:hover {
+  background: #243953;
+}
+
 .dark-mode .header-search {
-  background: #1c2c43;
+  background: #1a2a40;
   border-color: #33455f;
+  color: #e6efff;
 }
 
 .dark-mode .header-search input {
@@ -707,9 +714,91 @@ button {
   color: #a8b8d0;
 }
 
+.dark-mode .admin-trigger {
+  color: #e6efff;
+}
+
+.dark-mode .admin-trigger:hover,
+.dark-mode .admin-trigger[aria-expanded="true"] {
+  background: #243953;
+  border-color: #33455f;
+}
+
+.dark-mode .admin-details strong {
+  color: #f1f6ff;
+}
+
+.dark-mode .admin-details span {
+  color: #a8b8d0;
+}
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.dark-mode .sidebar {
+  background: linear-gradient(180deg, #0b1b30 0%, #061426 100%);
+  color: #f8fbff;
+}
+
+.dark-mode .sidebar-link {
+  color: #edf4ff;
+}
+
+.dark-mode .sidebar-link:hover {
+  background: #1b3b5d;
+}
+
+.dark-mode .sidebar-link.active {
+  background: linear-gradient(
+    100deg,
+    #1463d4 0%,
+    #0877f9 100%
+  );
+  color: #ffffff;
+}
+
+.dark-mode .sidebar-bottom {
+  border-color: #29445d;
+}
+
+/* =========================
+   MAIN PAGE
+   ========================= */
+
+.dark-mode .app-body {
+  background: #0b1424;
+}
+
+.dark-mode .main-content {
+  background: #0b1424;
+  color: #edf4ff;
+}
+
+.dark-mode .page-heading h1 {
+  color: #f1f6ff;
+}
+
+.dark-mode .page-heading p {
+  color: #a8b8d0;
+}
+
+/* =========================
+   WELCOME CARD
+   ========================= */
+
 .dark-mode .welcome-card {
-  background: #142238;
-  border-color: #263750;
+  background: linear-gradient(
+    110deg,
+    #142238 0%,
+    #172b46 100%
+  );
+  border-color: #29415f;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+}
+
+.dark-mode .welcome-label {
+  color: #4d9aff;
 }
 
 .dark-mode .welcome-card h2 {
@@ -720,15 +809,110 @@ button {
   color: #a8b8d0;
 }
 
+.dark-mode .welcome-icon {
+  background: #24476f;
+  color: #55a1ff;
+}
+
+/* =========================
+   DASHBOARD SUMMARY CARDS
+   ========================= */
+
+.dark-mode .summary-card {
+  background: #142238;
+  border-color: #29415f;
+  color: #edf4ff;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .summary-card-title {
+  color: #a8b8d0;
+}
+
+.dark-mode .summary-card-value {
+  color: #f1f6ff;
+}
+
+.dark-mode .summary-card-description {
+  color: #91a4bd;
+}
+
+/* =========================
+   ATTENDANCE / ACTIVITY
+   ========================= */
+
+.dark-mode .attendance-card,
+.dark-mode .activity-card {
+  background: #142238;
+  border-color: #29415f;
+  color: #edf4ff;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .attendance-card h3,
+.dark-mode .activity-card h3 {
+  color: #f1f6ff;
+}
+
+.dark-mode .attendance-card p,
+.dark-mode .activity-card p {
+  color: #a8b8d0;
+}
+
+/* =========================
+   QUICK ACTIONS
+   ========================= */
+
+.dark-mode .quick-actions-section {
+  background: #142238;
+  border-color: #29415f;
+  color: #edf4ff;
+}
+
+.dark-mode .quick-actions-section h3 {
+  color: #f1f6ff;
+}
+
+.dark-mode .quick-action {
+  background: #1a2c44;
+  border-color: #304966;
+  color: #edf4ff;
+}
+
+.dark-mode .quick-action:hover {
+  background: #213a59;
+  border-color: #3d638d;
+}
+
+.dark-mode .quick-action span {
+  color: #dbe7f7;
+}
+
+/* =========================
+   NOTIFICATION / PROFILE
+   ========================= */
+
 .dark-mode .profile-dropdown,
 .dark-mode .notification-panel {
   background: #17263c;
   border-color: #33455f;
   color: #f1f6ff;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
 }
 
-.dark-mode .dropdown-item,
+.dark-mode .profile-dropdown-header {
+  border-color: #33455f;
+}
+
 .dark-mode .profile-dropdown-header strong {
+  color: #f1f6ff;
+}
+
+.dark-mode .profile-dropdown-header span {
+  color: #b4c3d9;
+}
+
+.dark-mode .dropdown-item {
   color: #f1f6ff;
 }
 
@@ -736,18 +920,35 @@ button {
   background: #243953;
 }
 
-.dark-mode .notification-copy p,
-.dark-mode .notification-copy > span,
-.dark-mode .profile-dropdown-header span {
-  color: #b4c3d9;
+.dark-mode .dropdown-divider {
+  background: #33455f;
 }
 
-.dark-mode .notification-item,
-.dark-mode .profile-dropdown-header,
-.dark-mode .dropdown-divider,
+.dark-mode .notification-item {
+  border-color: #33455f;
+}
+
 .dark-mode .popover-heading {
   border-color: #33455f;
 }
+
+.dark-mode .notification-copy strong {
+  color: #f1f6ff;
+}
+
+.dark-mode .notification-copy p {
+  color: #b4c3d9;
+}
+
+.dark-mode .notification-copy > span {
+  color: #91a4bd;
+}
+
+.dark-mode .view-notifications {
+  background: #203957;
+  color: #66a8ff;
+}
+
 
 /* TABLET AND MOBILE */
 
@@ -955,4 +1156,69 @@ button {
   .school-brand {
     gap: 5px;
   }
+}
+
+
+.popover-dismiss {
+  position: fixed;
+  inset: 84px 0 0 0;
+  z-index: 40;
+  width: 100%;
+  height: calc(100vh - 84px);
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: default;
+}
+
+.popover-dismiss:focus,
+.popover-dismiss:focus-visible {
+  outline: none;
+}
+
+.page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.page-student-count {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+  padding: 10px 16px;
+  background: #ffffff;
+  border: 1px solid #e1eaf5;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(31, 55, 86, 0.04);
+}
+
+.page-student-count-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #edf5ff;
+  color: #2878ed;
+}
+
+.page-student-count span {
+  display: block;
+  color: #7a8ba5;
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.page-student-count strong {
+  display: block;
+  margin-top: 2px;
+  color: #16365f;
+  font-size: 20px;
+  line-height: 1.2;
 }
