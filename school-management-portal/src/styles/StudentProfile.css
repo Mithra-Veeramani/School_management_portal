@@ -1,0 +1,548 @@
+/* =========================================================
+   STUDENT PROFILE
+========================================================= */
+
+.student-profile-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.student-profile-header {
+  margin-bottom: 20px;
+}
+
+.student-profile-header h1 {
+  margin: 10px 0 0;
+  color: #102b52;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.student-profile-header p {
+  margin: 6px 0 0;
+  color: #526987;
+  font-size: 15px;
+}
+
+.student-profile-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #0877f9;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.student-profile-back-button:hover {
+  color: #0669df;
+}
+
+/* =========================================================
+   BASIC PROFILE CARD
+========================================================= */
+
+.student-profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 22px;
+  margin-bottom: 16px;
+  border: 1px solid #dfe8f3;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.student-profile-main {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.student-profile-avatar {
+  width: 76px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #e2efff;
+  color: #0877f9;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.student-profile-name h2 {
+  margin: 0 0 5px;
+  color: #122b61;
+  font-size: 22px;
+}
+
+.student-profile-name > span {
+  color: #667a99;
+  font-size: 13px;
+}
+
+.student-profile-status-row {
+  margin-top: 9px;
+}
+
+.student-profile-status {
+  display: inline-flex;
+  padding: 5px 11px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.student-profile-status.active {
+  background: #dcf7eb;
+  color: #0a9a58;
+}
+
+.student-profile-status.inactive {
+  background: #ffe3e5;
+  color: #e22b35;
+}
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.student-profile-details {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.student-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.student-detail-item > svg {
+  color: #0877f9;
+}
+
+.student-detail-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.student-detail-item span {
+  color: #71829c;
+  font-size: 11px;
+}
+
+.student-detail-item strong {
+  color: #1c3763;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.student-profile-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.student-profile-summary-card {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 18px;
+  border: 1px solid;
+  border-radius: 9px;
+}
+
+.student-profile-summary-card.blue {
+  background: #eef7ff;
+  border-color: #cce3fb;
+}
+
+.student-profile-summary-card.green {
+  background: #edfcf6;
+  border-color: #c9efdf;
+}
+
+.student-profile-summary-card.purple {
+  background: #f5efff;
+  border-color: #e1d3fa;
+}
+
+.student-profile-summary-card.yellow {
+  background: #fff9ed;
+  border-color: #f5e4bd;
+}
+
+.student-profile-summary-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 11px;
+}
+
+.blue .student-profile-summary-icon {
+  background: #dbeeff;
+  color: #0877f9;
+}
+
+.green .student-profile-summary-icon {
+  background: #d5f5e7;
+  color: #0bb567;
+}
+
+.purple .student-profile-summary-icon {
+  background: #e9ddff;
+  color: #792cf0;
+}
+
+.yellow .student-profile-summary-icon {
+  background: #ffedc8;
+  color: #ee9412;
+}
+
+.student-profile-summary-card span {
+  display: block;
+  margin-bottom: 5px;
+  color: #344e76;
+  font-size: 12px;
+}
+
+.student-profile-summary-card strong {
+  color: #102b52;
+  font-size: 25px;
+  line-height: 1;
+}
+
+/* =========================================================
+   CONTENT GRID
+========================================================= */
+
+.student-profile-content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.student-profile-section-card {
+  border: 1px solid #dfe8f3;
+  border-radius: 10px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.student-profile-section-header {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 18px;
+  border-bottom: 1px solid #edf1f6;
+}
+
+.student-profile-section-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: #e6f1ff;
+  color: #0877f9;
+}
+
+.student-profile-section-header h2 {
+  margin: 0;
+  color: #122b61;
+  font-size: 16px;
+}
+
+.student-profile-section-header p {
+  margin: 3px 0 0;
+  color: #71829c;
+  font-size: 11px;
+}
+
+/* =========================================================
+   ATTENDANCE
+========================================================= */
+
+.student-profile-attendance {
+  padding: 20px 18px 10px;
+}
+
+.attendance-progress {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e7edf5;
+}
+
+.attendance-progress-bar {
+  height: 100%;
+  border-radius: inherit;
+  background: #19be7a;
+}
+
+.attendance-progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+}
+
+.attendance-progress-info span {
+  color: #657994;
+  font-size: 12px;
+}
+
+.attendance-progress-info strong {
+  color: #102b52;
+  font-size: 13px;
+}
+
+.attendance-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #edf1f6;
+  margin-top: 12px;
+}
+
+.attendance-stat-grid div {
+  padding: 17px;
+  text-align: center;
+  border-right: 1px solid #edf1f6;
+}
+
+.attendance-stat-grid div:last-child {
+  border-right: none;
+}
+
+.attendance-stat-grid span {
+  display: block;
+  margin-bottom: 5px;
+  color: #71829c;
+  font-size: 11px;
+}
+
+.attendance-stat-grid strong {
+  color: #122b61;
+  font-size: 18px;
+}
+
+/* =========================================================
+   ASSIGNMENTS
+========================================================= */
+
+.assignment-summary-list {
+  padding: 8px 18px 12px;
+}
+
+.assignment-summary-row {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #edf1f6;
+}
+
+.assignment-summary-row:last-child {
+  border-bottom: none;
+}
+
+.assignment-summary-row div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.assignment-summary-row div svg {
+  color: #0877f9;
+}
+
+.assignment-summary-row span {
+  color: #344e76;
+  font-size: 12px;
+}
+
+.assignment-summary-row strong {
+  color: #122b61;
+  font-size: 15px;
+}
+
+.assignment-summary-row.total div svg {
+  color: #792cf0;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.student-profile-empty {
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dfe8f3;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #0877f9;
+}
+
+.student-profile-empty h2 {
+  margin: 12px 0 5px;
+  color: #102b52;
+}
+
+.student-profile-empty p {
+  margin: 0;
+  color: #71829c;
+  font-size: 13px;
+}
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+.dark-mode .student-profile-header h1 {
+  color: #f1f6ff;
+}
+
+.dark-mode .student-profile-header p {
+  color: #a8b8d0;
+}
+
+.dark-mode .student-profile-card,
+.dark-mode .student-profile-section-card,
+.dark-mode .student-profile-empty {
+  background: #142238;
+  border-color: #29415f;
+}
+
+.dark-mode .student-profile-avatar {
+  background: #1d3654;
+  color: #55a1ff;
+}
+
+.dark-mode .student-profile-name h2,
+.dark-mode .student-profile-summary-card strong,
+.dark-mode .student-profile-section-header h2,
+.dark-mode .attendance-progress-info strong,
+.dark-mode .attendance-stat-grid strong,
+.dark-mode .assignment-summary-row strong {
+  color: #f1f6ff;
+}
+
+.dark-mode .student-profile-name > span,
+.dark-mode .student-detail-item span,
+.dark-mode .student-profile-summary-card span,
+.dark-mode .student-profile-section-header p,
+.dark-mode .attendance-progress-info span,
+.dark-mode .attendance-stat-grid span,
+.dark-mode .assignment-summary-row span {
+  color: #9cafc8;
+}
+
+.dark-mode .student-detail-item strong {
+  color: #dce8f7;
+}
+
+.dark-mode .student-profile-section-header,
+.dark-mode .attendance-stat-grid,
+.dark-mode .assignment-summary-row {
+  border-color: #29415f;
+}
+
+.dark-mode .attendance-progress {
+  background: #263b55;
+}
+
+.dark-mode .student-profile-empty h2 {
+  color: #f1f6ff;
+}
+
+.dark-mode .student-profile-empty p {
+  color: #9cafc8;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .student-profile-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .student-profile-details {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .student-profile-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .student-profile-content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .student-profile-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-profile-main {
+    align-items: flex-start;
+  }
+
+  .student-profile-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .attendance-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .attendance-stat-grid div {
+    border-right: none;
+    border-bottom: 1px solid #edf1f6;
+  }
+
+  .dark-mode .attendance-stat-grid div {
+    border-bottom-color: #29415f;
+  }
+
+  .attendance-stat-grid div:last-child {
+    border-bottom: none;
+  }
+}

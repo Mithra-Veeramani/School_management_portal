@@ -1,0 +1,628 @@
+/* =========================================================
+   SETTINGS PAGE
+========================================================= */
+
+.settings-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  min-width: 0;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.settings-page-header {
+  margin-bottom: 20px;
+}
+
+.settings-page-header h1 {
+  margin: 0;
+  color: #102b52;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.settings-page-header p {
+  margin: 6px 0 0;
+  color: #526987;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   SETTINGS TABS
+========================================================= */
+
+.settings-tabs {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.settings-tab {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  border: 1px solid #dce6f1;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #142c56;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.settings-tab svg {
+  color: #5365a8;
+}
+
+.settings-tab:hover {
+  border-color: #bcd2ee;
+  background: #f7faff;
+}
+
+.settings-tab.active {
+  border-color: #0877f9;
+  background: #0877f9;
+  color: #ffffff;
+  box-shadow: 0 5px 12px rgba(8, 119, 249, 0.14);
+}
+
+.settings-tab.active svg {
+  color: #ffffff;
+}
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.settings-content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(360px, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.settings-left-column,
+.settings-right-column {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* =========================================================
+   SETTINGS CARD
+========================================================= */
+
+.settings-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #dfe8f3;
+  border-radius: 9px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(30, 58, 90, 0.025);
+}
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.settings-card-header {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+}
+
+.settings-section-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #e7f1ff;
+  color: #0877f9;
+}
+
+.settings-card-header h2 {
+  margin: 0;
+  color: #122b61;
+  font-size: 17px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.settings-card-header p {
+  margin: 3px 0 0;
+  color: #5a6fa0;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   SCHOOL LOGO
+========================================================= */
+
+.school-profile-card .settings-card-header {
+  position: relative;
+  padding-right: 17px;
+}
+
+.school-logo-area {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.school-logo-preview {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e6f2ff;
+  color: #0877f9;
+}
+
+.change-logo-button {
+  height: 38px;
+  padding: 0 14px;
+  border: 1px solid #dbe7f5;
+  border-radius: 7px;
+  background: #f5f9ff;
+  color: #0877f9;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.change-logo-button:hover {
+  background: #edf5ff;
+}
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.settings-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px 17px;
+  padding: 0 16px 14px;
+}
+
+.settings-field {
+  min-width: 0;
+}
+
+.settings-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.settings-field label {
+  display: block;
+  margin-bottom: 6px;
+  color: #172d50;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.settings-field label span {
+  margin-left: 2px;
+  color: #ef3340;
+}
+
+.settings-field input,
+.settings-field textarea,
+.settings-field select {
+  width: 100%;
+  border: 1px solid #d8e3ef;
+  border-radius: 7px;
+  outline: none;
+  background: #ffffff;
+  color: #1c3763;
+  font-family: inherit;
+  font-size: 12px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.settings-field input,
+.settings-field select {
+  height: 38px;
+  padding: 0 11px;
+}
+
+.settings-field textarea {
+  min-height: 70px;
+  resize: vertical;
+  padding: 9px 11px;
+  line-height: 1.45;
+}
+
+.settings-field input:focus,
+.settings-field textarea:focus,
+.settings-field select:focus {
+  border-color: #0877f9;
+  box-shadow: 0 0 0 3px rgba(8, 119, 249, 0.07);
+}
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.settings-select-wrapper {
+  position: relative;
+}
+
+.settings-select-wrapper select {
+  appearance: none;
+  padding-right: 34px;
+  cursor: pointer;
+}
+
+.settings-select-wrapper svg {
+  position: absolute;
+  top: 50%;
+  right: 11px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  color: #526987;
+}
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
+.settings-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 16px 13px;
+}
+
+.settings-save-button {
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 7px;
+  background: #0877f9;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.settings-save-button:hover {
+  background: #0669df;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   NOTIFICATIONS
+========================================================= */
+
+.notification-list {
+  padding: 0 16px 7px;
+}
+
+.notification-row {
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid #edf1f6;
+}
+
+.notification-row:last-child {
+  border-bottom: none;
+}
+
+.notification-row > span {
+  color: #1c3763;
+  font-size: 12px;
+}
+
+/* =========================================================
+   TOGGLE
+========================================================= */
+
+.settings-toggle {
+  position: relative;
+  width: 38px;
+  height: 21px;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: #b6c3d6;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.settings-toggle span {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: left 0.2s ease;
+}
+
+.settings-toggle.active {
+  background: #0877f9;
+}
+
+.settings-toggle.active span {
+  left: 20px;
+}
+
+/* =========================================================
+   OTHER TAB PLACEHOLDER
+========================================================= */
+
+.settings-tab-placeholder {
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dfe8f3;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #0877f9;
+}
+
+.settings-tab-placeholder h2 {
+  margin: 15px 0 5px;
+  color: #102b52;
+  font-size: 20px;
+}
+
+.settings-tab-placeholder p {
+  margin: 0;
+  color: #687d9c;
+  font-size: 13px;
+}
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+.dark-mode .settings-page-header h1 {
+  color: #f1f6ff;
+}
+
+.dark-mode .settings-page-header p {
+  color: #a8b8d0;
+}
+
+/* Tabs */
+
+.dark-mode .settings-tab {
+  border-color: #304966;
+  background: #142238;
+  color: #dce8f7;
+}
+
+.dark-mode .settings-tab svg {
+  color: #91a4bd;
+}
+
+.dark-mode .settings-tab:hover {
+  border-color: #456486;
+  background: #182b43;
+}
+
+.dark-mode .settings-tab.active {
+  border-color: #0877f9;
+  background: #0877f9;
+  color: #ffffff;
+}
+
+.dark-mode .settings-tab.active svg {
+  color: #ffffff;
+}
+
+/* Cards */
+
+.dark-mode .settings-card {
+  background: #142238;
+  border-color: #29415f;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Headers */
+
+.dark-mode .settings-card-header h2 {
+  color: #f1f6ff;
+}
+
+.dark-mode .settings-card-header p {
+  color: #a8b8d0;
+}
+
+.dark-mode .settings-section-icon {
+  background: #1d3654;
+  color: #55a1ff;
+}
+
+/* Logo */
+
+.dark-mode .school-logo-preview {
+  background: #1d3654;
+  color: #55a1ff;
+}
+
+.dark-mode .change-logo-button {
+  background: #182b43;
+  border-color: #304966;
+  color: #55a1ff;
+}
+
+.dark-mode .change-logo-button:hover {
+  background: #213a59;
+}
+
+/* Form */
+
+.dark-mode .settings-field label {
+  color: #dce8f7;
+}
+
+.dark-mode .settings-field input,
+.dark-mode .settings-field textarea,
+.dark-mode .settings-field select {
+  border-color: #304966;
+  background: #182b43;
+  color: #edf4ff;
+}
+
+.dark-mode .settings-field input::placeholder,
+.dark-mode .settings-field textarea::placeholder {
+  color: #71839c;
+}
+
+.dark-mode .settings-select-wrapper svg {
+  color: #91a4bd;
+}
+
+/* Notifications */
+
+.dark-mode .notification-row {
+  border-bottom-color: #29415f;
+}
+
+.dark-mode .notification-row > span {
+  color: #c5d2e2;
+}
+
+/* Placeholder */
+
+.dark-mode .settings-tab-placeholder {
+  border-color: #29415f;
+  background: #142238;
+}
+
+.dark-mode .settings-tab-placeholder h2 {
+  color: #f1f6ff;
+}
+
+.dark-mode .settings-tab-placeholder p {
+  color: #8fa2bb;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+  .settings-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-right-column {
+    display: grid;
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    );
+    align-items: start;
+  }
+}
+
+@media (max-width: 850px) {
+  .settings-tabs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .settings-right-column {
+    display: flex;
+  }
+
+  .school-logo-area {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .settings-page-header h1 {
+    font-size: 26px;
+  }
+
+  .settings-tabs {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .settings-tab {
+    height: 48px;
+  }
+
+  .settings-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-field.full-width {
+    grid-column: auto;
+  }
+
+  .settings-card-header {
+    align-items: flex-start;
+  }
+
+  .settings-section-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .settings-card-header h2 {
+    font-size: 16px;
+  }
+
+  .settings-card-footer {
+    justify-content: stretch;
+  }
+
+  .settings-save-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .settings-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-tab {
+    justify-content: flex-start;
+    padding: 0 18px;
+  }
+}

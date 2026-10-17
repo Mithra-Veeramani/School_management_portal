@@ -18,13 +18,25 @@ import {
 import students from "../data/students";
 import "../styles/Students.css";
 
-function Students() {
+function Students({ onViewStudent }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedClass, setSelectedClass] = useState("All Classes");
   const [selectedSection, setSelectedSection] = useState("All Sections");
   const [selectedStatus, setSelectedStatus] = useState("All Status");
-
   const [currentPage, setCurrentPage] = useState(1);
+
+  const [isAddStudentOpen, setIsAddStudentOpen] = useState(false);
+
+  const [studentForm, setStudentForm] = useState({
+    id: "",
+    name: "",
+    className: "",
+    section: "",
+    phone: "",
+    status: "Active",
+  });
+
+  const [formErrors, setFormErrors] = useState({});
 
   const studentsPerPage = 8;
 
@@ -153,7 +165,9 @@ function Students() {
   }
 
   function handleView(student) {
-    console.log("View student:", student);
+    if (onViewStudent) {
+      onViewStudent(student);
+    }
   }
 
   function handleEdit(student) {
@@ -165,7 +179,8 @@ function Students() {
   }
 
   function handleAddStudent() {
-    console.log("Add student");
+    setIsAddStudentOpen(true);
+    // console.log("Add student");
   }
 
   return (
@@ -432,9 +447,8 @@ function Students() {
 
                       <td>
                         <span
-                          className={`student-status ${
-                            student.status.toLowerCase()
-                          }`}
+                          className={`student-status ${student.status.toLowerCase()
+                            }`}
                         >
                           {student.status}
                         </span>

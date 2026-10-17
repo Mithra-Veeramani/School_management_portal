@@ -4,7 +4,16 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Sidebar from "./components/Sidebar";
 import Students from "./pages/Students";
-// import Teachers from "./pages/Teachers";
+import Teachers from "./pages/Teachers";
+import Classes from "./pages/Classes";
+import Subjects from "./pages/Subjects";
+import Attendance from "./pages/Attendance";
+import Assignments from "./pages/Assignments";
+import Reports from "./pages/Reports";
+import Settings from "./pages/Settings";
+import StudentProfile from "./pages/StudentProfile";
+
+
 import "./styles/Layout.css";
 
 function App() {
@@ -12,6 +21,7 @@ function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [activePage, setActivePage] = useState("Dashboard");
+  const [selectedStudent, setSelectedStudent] = useState(null);
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -27,6 +37,16 @@ function App() {
   function handleNavigate(page) {
     setActivePage(page);
     setMobileMenuOpen(false);
+  }
+
+  function handleViewStudent(student) {
+    setSelectedStudent(student);
+    setActivePage("StudentProfile");
+  }
+
+  function handleBackToStudents() {
+    setSelectedStudent(null);
+    setActivePage("Students");
   }
 
   if (!isLoggedIn) {
@@ -80,8 +100,22 @@ function App() {
             </>
           )}
 
-          {activePage === "Students" && <Students />}
-          {/* {activePage === "Teachers" && <Teachers />} */}
+          {activePage === "Students" && (
+            <Students onViewStudent={handleViewStudent} />
+          )}
+          {activePage === "StudentProfile" && (
+            <StudentProfile
+              student={selectedStudent}
+              onBack={handleBackToStudents}
+            />
+          )}
+          {activePage === "Teachers" && <Teachers />}
+          {activePage === "Classes" && <Classes />}
+          {activePage === "Subjects" && <Subjects />}
+          {activePage === "Attendance" && <Attendance />}
+          {activePage === "Assignments" && <Assignments />}
+          {activePage === "Reports" && <Reports />}
+          {activePage === "Settings" && <Settings />}
 
         </main>
       </div>
